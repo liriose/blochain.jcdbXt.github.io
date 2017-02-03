@@ -9,7 +9,3 @@ document.getElementById("demo").innerHTML = jsonPretty;
 };
 xmlhttp.open("GET", "https://api.blockcypher.com/v1/btc/main", true);
 xmlhttp.send();
-à mettre dans le fichier index.html
-<pre>
-<code id="demo" class="json kljs"></code>
-</pre>
