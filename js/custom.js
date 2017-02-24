@@ -14,7 +14,7 @@ xmlhttp1.onreadystatechange = function() {
 if (this.readyState == 4 && this.status == 200) {
 var myObj = this.responseText;
 var jsonPretty = JSON.stringify(JSON.parse(myObj),null,2);
-document.getElementById("demo").innerHTML = jsonPretty;
+document.getElementById("demo1").innerHTML = jsonPretty;
 }
 };
 xmlhttp1.open("GET", "http://bitcoin.mubiz.com/blockchaininfo", true);
@@ -24,7 +24,7 @@ xmlhttp2.onreadystatechange = function() {
 if (this.readyState == 4 && this.status == 200) {
 var myObj = this.responseText;
 var jsonPretty = JSON.stringify(JSON.parse(myObj),null,2);
-document.getElementById("demo").innerHTML = jsonPretty;
+document.getElementById("demo2").innerHTML = jsonPretty;
 }
 };
 xmlhttp2.open("GET", "http://bitcoin.mubiz.com/peerinfo", true);
@@ -34,7 +34,7 @@ xmlhttp3.onreadystatechange = function() {
 if (this.readyState == 4 && this.status == 200) {
 var myObj = this.responseText;
 var jsonPretty = JSON.stringify(JSON.parse(myObj),null,2);
-document.getElementById("demo").innerHTML = jsonPretty;
+document.getElementById("demo3").innerHTML = jsonPretty;
 }
 };
 xmlhttp3.open("GET", "http://bitcoin.mubiz.com/mininginfo", true);
