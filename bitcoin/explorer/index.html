@@ -3,47 +3,26 @@
 <head>
 	<meta charset="UTF-8"/>
 	<title>ESILV - Blockchain Programming - TP/TD 3e annee</title>
-	<form>
+</head>
+	<form action="conec.js">
 	  <div class="form-group">
-		<label for="adress">Adresse web</label>
+		<label for="adress">Adresse valise</label>
 		<input type="url" class="form-control" id="adress">
 	  </div>
-	  <div class="checkbox">
-		<label>
-		  <input type="checkbox" id="checkbox"> Check me out
-		</label>
+	  	  <div class="form-group">
+		<label for="transaction">transaction</label>
+		<input type="text" class="form-control" id="transaction">
 	  </div>
-	  <button href=adress>Adress<button/>
+	  	  <div class="form-group">
+		<label for="hash">hash</label>
+		<input type="text" class="form-control" id="hash">
+	  </div>
+	  	  <div class="form-group">
+		<label for="index">Index</label>
+		<input type="text" class="form-control" id="index">
+	  </div>
 	  <button type="submit" class="btn btn-default">Submit</button>
 	</form>
-	<form method="link" action="https://fr.wikipedia.org/wiki/Representational_state_transfer">
-	<input type="submit" value="cliquez ici"></form>
-	<p><a href="../../index.html">Home</a>
-	<script>
-		function output(inp) {
-			document.body.appendChild(document.createElement('pre')).innerHTML = inp;
-		}
-
-		function syntaxHighlight(json) {
-			json = json.replace(/&/g, '&').replace(//g, '>');
-			return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
-				var cls = 'number';
-				if (/^"/.test(match)) {
-					if (/:$/.test(match)) {
-						cls = 'key';
-					} else {
-						cls = 'string';
-					}
-				} else if (/true|false/.test(match)) {
-					cls = 'boolean';
-				} else if (/null/.test(match)) {
-					cls = 'null';
-				}
-				return '<span class="' + cls + '">' + match + '</span>';
-			});
-		}
-
-		output(str);
-		output(syntaxHighlight(str));
-</script>
+	<p><a href="../../index.html">Home</a><p>
+	<code id="envoie" class="json kljs"></code>
 </html>
